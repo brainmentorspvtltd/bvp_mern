@@ -1,0 +1,42 @@
+var a = 10;
+undefined
+a.toString();
+"10"
+a;
+10
+var b  = a.toString();
+undefined
+b;
+"10"
+a;
+10
+parseInt(b);
+10
+window.parseInt("900")
+900
+typeof window;
+"object"
+window.open('https://www.google.com');
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+window;
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+window instanceof Window;
+true
+typeof Window;
+"function"
+window == this;
+true
+this;
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+window;
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+window.a;
+10
+a;
+10
+window.a.toString();
+"10"
+history
+History {length: 2, scrollRestoration: "auto", state: null}
+//history.back()
+undefined

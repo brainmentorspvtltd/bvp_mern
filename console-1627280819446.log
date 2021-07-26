@@ -1,0 +1,59 @@
+var a = 'amit';
+undefined
+typeof a;
+"string"
+a = "Amit";
+"Amit"
+typeof a;
+"string"
+a = `gjdfklfjgkjfgjldfjglkjdfklgfdjklgjkldf
+gdfkljghdfkjghkjdfhgjkhfgjk
+hgdfjkhgfjkghjkdfhgjkdhfjkghdfk
+gdfhkjghdfkjhgjkdfhgjkdf
+gdfjhkjghdfjkh`;
+"gjdfklfjgkjfgjldfjglkjdfklgfdjklgjkldf\ngdfkljghdfkjghkjdfhgjkhfgjk\nhgdfjkhgfjkghjkdfhgjkdhfjkghdfk\ngdfhkjghdfkjhgjkdfhgjkdf\ngdfjhkjghdfjkh"
+a;
+"gjdfklfjgkjfgjldfjglkjdfklgfdjklgjkldf\ngdfkljghdfkjghkjdfhgjkhfgjk\nhgdfjkhgfjkghjkdfhgjkdhfjkghdfk\ngdfhkjghdfkjhgjkdfhgjkdf\ngdfjhkjghdfjkh"
+typeof a;
+"string"
+var x = 10;
+undefined
+var y = 20;
+undefined
+var z = x + y;
+undefined
+var msg = "X is "+x+ " Y is "+y+" Z is "+z;
+undefined
+msg;
+"X is 10 Y is 20 Z is 30"
+console.log(msg)
+VM561:1 X is 10 Y is 20 Z is 30
+undefined
+msg = `X is ${x} Y is ${y} and Z is ${z}`;
+"X is 10 Y is 20 and Z is 30"
+msg.toUpperCase();
+"X IS 10 Y IS 20 AND Z IS 30"
+var x = true;
+undefined
+typeof x;
+"boolean"
+var y = false;
+undefined
+typeof y;
+"boolean"
+var z = true;
+undefined
+typeof z;
+"boolean"
+x + y + z;
+2
+var arr = [10,20,30,40,50];
+undefined
+typeof arr;
+"object"
+arr = null;
+null
+typeof arr;
+"object"
+typeof  null;
+"object"
