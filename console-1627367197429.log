@@ -1,0 +1,250 @@
+var a = 10;
+undefined
+typeof a;
+"number"
+a = 11111111;
+11111111
+typeof a;
+"number"
+a = Number.MAX_SAFE_INTEGER;
+9007199254740991
+a = a +1
+9007199254740992
+a = a +1
+9007199254740992
+a = a +1
+9007199254740992
+a = a +1
+9007199254740992
+var b = 9007199254740992n;
+undefined
+typeof b;
+"bigint"
+b = b + 1000;
+VM275:1 Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+    at <anonymous>:1:7
+(anonymous) @ VM275:1
+b = b + 1000n;
+9007199254741992n
+b;
+9007199254741992n
+var c= BigInt("645645657567657534534533242343246547658686");
+undefined
+c;
+645645657567657534534533242343246547658686n
+typeof c;
+"bigint"
+typeof BigInt;
+"function"
+var price = 10000;
+undefined
+price.toLocaleString('hi-IN');
+"10,000"
+price.toLocaleString('en-US');
+"10,000"
+price.toLocaleString('fr-FR');
+"10 000"
+price = 10000.20
+10000.2
+price.toLocaleString('fr-FR');
+"10 000,2"
+typeof price;
+"number"
+price;
+10000.2
+var result = price.toLocaleString('fr-FR');
+undefined
+result;
+"10 000,2"
+typeof result;
+"string"
+var obj = {};
+undefined
+typeof obj;
+"object"
+obj instanceof Object;
+true
+typeof Object;
+"function"
+var arr= [];
+undefined
+typeof arr;
+"object"
+arr instanceof Array;
+true
+typeof Array;
+"function"
+arr instanceof Object
+true
+var obj = {};
+undefined
+typeof obj;
+"object"
+obj.id = 1001;
+1001
+obj.name = 'Amit';
+"Amit"
+obj
+{id: 1001, name: "Amit"}
+obj.id;
+1001
+obj.name;
+"Amit"
+delete obj.id;
+true
+obj;
+{name: "Amit"}
+var obj2 = {id:1001, name:'Ram'};
+undefined
+obj2.id;
+1001
+obj2["id"]
+1001
+var msDhoni= {name:'MS Dhoni', age:41, 100:40, 50:70,6:1000};
+undefined
+typeof msDhoni;
+"object"
+msDhoni.name;
+"MS Dhoni"
+msDhoni.age
+41
+msDhoni.100
+VM1600:1 Uncaught SyntaxError: Unexpected number
+msDhoni[100]
+40
+msDhoni.4=2000
+VM1656:1 Uncaught SyntaxError: Unexpected number
+msDhoni[4]=2000
+2000
+msDhoni
+{4: 2000, 6: 1000, 50: 70, 100: 40, name: "MS Dhoni", age: 41}
+msDhoni[4]
+2000
+msDhoni.world cup = true
+VM1785:1 Uncaught SyntaxError: Unexpected identifier
+msDhoni["world cup"] = true
+true
+msDhoni
+{4: 2000, 6: 1000, 50: 70, 100: 40, name: "MS Dhoni", age: 41, world cup: true}
+msDhoni["world cup"]
+true
+msDhoni
+{4: 2000, 6: 1000, 50: 70, 100: 40, name: "MS Dhoni", age: 41, world cup: true}
+var x = msDhoni;
+undefined
+x;
+{4: 2000, 6: 1000, 50: 70, 100: 40, name: "MS Dhoni", age: 41, world cup: true}
+msDhoni
+{4: 2000, 6: 1000, 50: 70, 100: 40, name: "MS Dhoni", age: 41, world cup: true}
+x.age
+41
+msDhoni.age
+41
+x == msDhoni
+true
+x.age=42;
+42
+msDhoni
+{4: 2000, 6: 1000, 50: 70, 100: 40, name: "MS Dhoni", age: 42, world cup: true}
+var prices = [90,100,88,1,44,33,22];
+undefined
+var prices = [11,10,20,90,40];
+undefined
+prices.sort();
+(5) [10, 11, 20, 40, 90]
+prices;
+(5) [10, 11, 20, 40, 90]
+var prices = [11,10,20,90,40];
+undefined
+var prices2 = [...prices];
+undefined
+prices== prices2
+false
+prices2.sort();
+(5) [10, 11, 20, 40, 90]
+prices2;
+(5) [10, 11, 20, 40, 90]
+prices;
+(5) [11, 10, 20, 90, 40]
+typeof prices;
+"object"
+prices.push(50);
+6
+prices;
+(6) [11, 10, 20, 90, 40, 50]
+prices.pop();
+50
+prices;
+(5) [11, 10, 20, 90, 40]
+var name = "Amit";
+undefined
+typeof name;
+"string"
+name.toUpperCase();
+"AMIT"
+name.toLowerCase();
+"amit"
+name.length;
+4
+var x = 1000;
+undefined
+x.toString();
+"1000"
+typeof x;
+"number"
+var name2 = new String("Amit");
+undefined
+name;
+"Amit"
+name2;
+String {"Amit"}0: "A"1: "m"2: "i"3: "t"length: 4__proto__: String[[PrimitiveValue]]: "Amit"
+typeof name2;
+"object"
+typeof name;
+"string"
+name.charAt(0);
+"A"
+name2.charAt(0);
+"A"
+var obj = {id:1001, name:'Ram'};
+undefined
+typeof obj;
+"object"
+obj.id;
+1001
+obj["id"]
+1001
+obj = null;
+null
+obj.id;
+VM3374:1 Uncaught TypeError: Cannot read property 'id' of null
+    at <anonymous>:1:5
+(anonymous) @ VM3374:1
+typeof obj;
+"object"
+obj;
+null
+var b2;
+undefined
+typeof b2;
+"undefined"
+typeof obj;
+"object"
+undefined == null
+true
+10 =="10"
+true
+undefined === null
+false
+10 === "10"
+false
+100 + null
+100
+100 + undefined
+NaN
+NaN + 100
+NaN
+NaN + NaN
+NaN
+[] == []
+false
