@@ -1,0 +1,622 @@
+function adder(x,y){
+    return x + y;
+}
+undefined
+adder(10,20);
+30
+adder();
+NaN
+function adder(x,y){
+    console.log('X is ',x , ' Y is ',y);
+    return x + y;
+}
+undefined
+adder();
+VM273:2 X is  undefined  Y is  undefined
+NaN
+undefined + undefined
+NaN
+10 + undefined
+NaN
+adder(10);
+VM273:2 X is  10  Y is  undefined
+NaN
+function adder(x=0,y=0){
+    console.log('X is ',x , ' Y is ',y);
+    return x + y;
+}
+undefined
+adder();
+VM399:2 X is  0  Y is  0
+0
+adder(10);
+VM399:2 X is  10  Y is  0
+10
+adder(10,20);
+VM399:2 X is  10  Y is  20
+30
+adder(10,20);
+VM399:2 X is  10  Y is  20
+30
+var a;
+undefined
+if(typeof a==='undefined'){
+console.log('It is Undefined ');
+}
+else{
+console.log('It is not Undefined ');
+}
+VM597:2 It is Undefined 
+undefined
+typeof a;
+"undefined"
+a = null;
+null
+if(a!=null){
+console.log('Not NUll ');
+}
+else{
+console.log('Yes Null ');
+}
+VM779:5 Yes Null 
+undefined
+a = '';
+""
+if(a.length==0){}
+undefined
+adder();
+VM399:2 X is  0  Y is  0
+0
+adder(10);
+VM399:2 X is  10  Y is  0
+10
+adder(10,'')
+VM399:2 X is  10  Y is  
+"10"
+adder(10,null)
+VM399:2 X is  10  Y is  null
+10
+adder(10,NaN)
+VM399:2 X is  10  Y is  NaN
+NaN
+a = undefined;
+undefined
+if(a){
+console.log("Truthy ");
+}
+else{
+console.log("Falsy ");
+}
+VM1137:5 Falsy 
+undefined
+a= null;
+null
+if(a){
+console.log("Truthy ");
+}
+else{
+console.log("Falsy ");
+}
+VM1178:5 Falsy 
+undefined
+a='';
+""
+if(a){
+console.log("Truthy ");
+}
+else{
+console.log("Falsy ");
+}
+VM1199:5 Falsy 
+undefined
+a=0
+0
+if(a){
+console.log("Truthy ");
+}
+else{
+console.log("Falsy ");
+}
+VM1217:5 Falsy 
+undefined
+a=NaN;
+NaN
+if(a){
+console.log("Truthy ");
+}
+else{
+console.log("Falsy ");
+}
+VM1241:5 Falsy 
+undefined
+function adder(x,y){
+    console.log('X is ',x , ' Y is ',y);
+    return x + y;
+}
+undefined
+function adder(x,y){
+    x = x || 0;
+    y = y || 0;
+    console.log('X is ',x , ' Y is ',y);
+    return x + y;
+}
+undefined
+adder();
+VM1333:4 X is  0  Y is  0
+0
+adder(null,null);
+VM1333:4 X is  0  Y is  0
+0
+adder('',NaN);
+VM1333:4 X is  0  Y is  0
+0
+function show(){
+return 10;
+}
+undefined
+show();
+10
+disp();// calling it
+function disp(){ // define it
+console.log('I am disp ');
+}
+
+
+VM1668:3 I am disp 
+undefined
+var x = function(){
+
+}
+undefined
+typeof x;
+"function"
+x;
+ƒ (){
+
+}
+var x = function(){
+console.log('
+}
+VM1782:2 Uncaught SyntaxError: Invalid or unexpected token
+var x = function(){
+console.log('Function Expression or Anonymous Function');
+}
+undefined
+x;
+ƒ (){
+console.log('Function Expression or Anonymous Function');
+}
+x();
+VM1833:2 Function Expression or Anonymous Function
+undefined
+x(); // calling
+var x = function(){ // define
+console.log('Function Expression or Anonymous Function');
+}
+VM1833:2 Function Expression or Anonymous Function
+undefined
+z(); // calling
+var z = function(){ // define
+console.log('Function Expression or Anonymous Function');
+}
+VM1902:1 Uncaught TypeError: z is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM1902:1
+function disp(){
+// internally it hoist i e.g var i ; // undefined
+console.log('i is ',i);
+// so internally loop is like for(i= 1; i<=10; i++)
+for(var i= 1; i<=10; i++){
+console.log('I is ',i);
+}
+console.log('I is After Loop ', i);
+}
+undefined
+disp();
+VM2203:3 i is  undefined
+VM2203:6 I is  1
+VM2203:6 I is  2
+VM2203:6 I is  3
+VM2203:6 I is  4
+VM2203:6 I is  5
+VM2203:6 I is  6
+VM2203:6 I is  7
+VM2203:6 I is  8
+VM2203:6 I is  9
+VM2203:6 I is  10
+VM2203:8 I is After Loop  11
+undefined
+window;
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+this;
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+window == this;
+true
+var t =10;
+undefined
+window.t;
+10
+this.t;
+10
+z(); // calling
+var z = function(){ // define
+console.log('Function Expression or Anonymous Function');
+}
+VM2402:1 Uncaught TypeError: z is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM2402:1
+undefined();
+VM2424:1 Uncaught TypeError: undefined is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM2424:1
+function output(){
+console.log('M is ',m); // undefined
+if(10>2){
+var m = 10;
+}
+console.log('M is ',m);//10
+}
+output();
+console.log('M is ',m);
+VM2649:2 M is  undefined
+VM2649:6 M is  10
+VM2649:9 Uncaught ReferenceError: m is not defined
+    at <anonymous>:9:21
+(anonymous) @ VM2649:9
+function output(){
+console.log('M is ',m); // undefined
+if(10>2){
+let m = 10;
+}
+console.log('M is ',m);//10
+}
+output();
+
+VM2669:2 Uncaught ReferenceError: m is not defined
+    at output (<anonymous>:2:21)
+    at <anonymous>:8:1
+output @ VM2669:2
+(anonymous) @ VM2669:8
+function output(){
+//console.log('M is ',m); // undefined
+if(10>2){
+let m = 10;
+console.log('M is ',m);
+}
+//console.log('M is ',m);//10
+}
+output();
+
+VM2678:5 M is  10
+undefined
+function output(){
+//console.log('M is ',m); // undefined
+if(10>2){
+console.log('M is ',m);
+let m = 10;
+console.log('M is ',m);
+}
+//console.log('M is ',m);//10
+}
+output();
+
+VM2683:4 Uncaught ReferenceError: Cannot access 'm' before initialization
+    at output (<anonymous>:4:21)
+    at <anonymous>:10:1
+output @ VM2683:4
+(anonymous) @ VM2683:10
+var nn = 100;
+undefined
+window.nn;
+100
+let bb = 99;
+undefined
+window.bb;
+undefined
+function test(){
+//var x ;
+console.log('X is ',x); // undefined
+var x =10; // x = 10;
+console.log('X is ',x); //10
+if(10>2){
+var x = 20; // x = 20;
+console.log("x is ",x); //20
+}
+var x = 30; // x=30
+console.log('X is ',x);//30
+
+}
+undefined
+test();
+VM3075:3 X is  undefined
+VM3075:5 X is  10
+VM3075:8 x is  20
+VM3075:11 X is  30
+undefined
+function test(){
+//var x ;
+console.log('X is ',x); // undefined
+let x =10; // x = 10;
+console.log('X is ',x); //10
+if(10>2){
+let x = 20; // x = 20;
+console.log("x is ",x); //20
+}
+let x = 30; // x=30
+console.log('X is ',x);//30
+
+}
+VM3129:10 Uncaught SyntaxError: Identifier 'x' has already been declared
+function test(){
+
+console.log('X is ',x); // ReferenceError
+let x =10; // x = 10;
+console.log('X is ',x); //10
+if(10>2){
+let x = 20; // let x = 20;
+console.log("x is ",x); //20
+}
+//let x = 30;
+console.log('X is ',x);//10
+
+}
+undefined
+test();
+VM3161:3 Uncaught ReferenceError: Cannot access 'x' before initialization
+    at test (<anonymous>:3:21)
+    at <anonymous>:1:1
+test @ VM3161:3
+(anonymous) @ VM3181:1
+function test(){
+
+//console.log('X is ',x); // ReferenceError
+let x =10; // x = 10;
+console.log('X is ',x); //10
+if(10>2){
+let x = 20; // let x = 20;
+console.log("x is ",x); //20
+}
+//let x = 30;
+console.log('X is ',x);//10
+
+}
+undefined
+test();
+VM3190:5 X is  10
+VM3190:8 x is  20
+VM3190:11 X is  10
+undefined
+let x = 1000;
+VM3256:1 Uncaught SyntaxError: Identifier 'x' has already been declared
+x;
+ƒ (){ // define
+console.log('Function Expression or Anonymous Function');
+}
+var x = function(){
+console.log('Fn expression or Fn Anonymous ');
+}
+undefined
+window.test();
+VM3190:5 X is  10
+VM3190:8 x is  20
+VM3190:11 X is  10
+undefined
+function math(){
+var add = function (x,y){
+return x + y;
+}
+var sub = function(x,y){
+return x -y;
+}
+return [add, sub];
+}
+undefined
+window.math;
+ƒ math(){
+var add = function (x,y){
+return x + y;
+}
+var sub = function(x,y){
+return x -y;
+}
+return [add, sub];
+}
+window.add;
+undefined
+var arr = math();
+undefined
+arr;
+(2) [ƒ, ƒ]0: ƒ (x,y)1: ƒ (x,y)length: 2__proto__: Array(0)
+arr[0](10,20);
+30
+arr[1](10,20);
+-10
+arr;
+(2) [ƒ, ƒ]0: ƒ (x,y)arguments: nullcaller: nulllength: 2name: "add"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM3576:2[[Scopes]]: Scopes[2]1: ƒ (x,y)length: 2__proto__: Array(0)
+function math(){
+var add = function (x,y){
+return x + y;
+}
+var sub = function(x,y){
+return x -y;
+}
+//return [add, sub];
+return {"add":add, "sub":sub}; 
+}
+undefined
+var obj = math();
+undefined
+obj.add(10,20);
+30
+obj.sub(10,20);
+-10
+function math(){
+var add = function (x,y){
+return x + y;
+}
+var sub = function(x,y){
+return x -y;
+}
+//return [add, sub];
+//return {"add":add, "sub":sub};
+return {add, sub}; // Object ShortHand ES6
+}
+undefined
+var obj = math();
+undefined
+obj.add(10,20);
+30
+obj.sub(10,20);
+-10
+function math(){
+var add = function (x,y){
+return x + y;
+}
+var sub = function(x,y){
+return x -y;
+}
+//return [add, sub];
+//return {"add":add, "sub":sub};
+return {add, sub}; // Object ShortHand ES6
+}
+undefined
+var obj = math();
+undefined
+obj
+{add: ƒ, sub: ƒ}add: ƒ (x,y)sub: ƒ (x,y)__proto__: Object
+obj.add
+ƒ (x,y){
+return x + y;
+}
+obj.add.name;
+"add"
+function math(){
+var add = function adder(x,y){
+return x + y;
+}
+var sub = function subtract(x,y){
+return x -y;
+}
+//return [add, sub];
+//return {"add":add, "sub":sub};
+return {add, sub}; // Object ShortHand ES6
+}
+undefined
+var obj = math();
+undefined
+obj;
+{add: ƒ, sub: ƒ}add: ƒ adder(x,y)arguments: nullcaller: nulllength: 2name: "adder"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM4177:2[[Scopes]]: Scopes[2]sub: ƒ subtract(x,y)__proto__: Object
+obj.add;
+ƒ adder(x,y){
+return x + y;
+}
+obj.add.name;
+"adder"
+var addition = (a,b)=>a+b;
+undefined
+addition(10,20);
+30
+typeof addition;
+"function"
+var addition = (a,b)=>{
+console.log('A is ',a , ' and b is ',b);
+return a+b;
+}
+undefined
+addition(100,20);
+VM4509:2 A is  100  and b is  20
+120
+var printIt =x=>console.log(x);
+undefined
+printIt(100);
+VM4669:1 100
+undefined
+typeof printIt;
+"function"
+printIt = 1000;
+1000
+printIt();
+VM4817:1 Uncaught TypeError: printIt is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM4817:1
+const printing =x=>console.log(x);
+undefined
+printing(200);
+VM4845:1 200
+undefined
+printing =555;
+VM4924:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:10
+(anonymous) @ VM4924:1
+const MAX = 100;
+undefined
+MAX++
+VM4988:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM4988:1
+MAX = 200;
+VM5011:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM5011:1
+const ARR = [10,20,30,40,50];
+undefined
+ARR[0] = 1000;
+1000
+ARR;
+(5) [1000, 20, 30, 40, 50]
+ARR = [90,1000];
+VM5149:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM5149:1
+ARR.push(6666);
+6
+arr;
+(2) [ƒ, ƒ]
+ARR;
+(6) [1000, 20, 30, 40, 50, 6666]
+ARR.push(4444);
+7
+ARR;
+(7) [1000, 20, 30, 40, 50, 6666, 4444]
+ARR.splice(1);
+(6) [20, 30, 40, 50, 6666, 4444]
+ARR;
+[1000]
+const arr2= [10,20,30,40,50,60,70];
+undefined
+arr2.splice(1,2);
+(2) [20, 30]
+arr;
+(2) [ƒ, ƒ]
+arr2;
+(5) [10, 40, 50, 60, 70]
+arr2.splice(1,1,9999);
+[40]
+arr2;
+(5) [10, 9999, 50, 60, 70]
+arr2.splice(1,0,6666);
+[]
+arr2;
+(6) [10, 6666, 9999, 50, 60, 70]
+const obj = {id:1001};
+VM5731:1 Uncaught SyntaxError: Identifier 'obj' has already been declared
+const obj2 = {id:1001};
+undefined
+obj.id++;
+NaN
+obj2.id++;
+1001
+obj2;
+{id: 1002}
+obj.name = "Amit";
+"Amit"
+obj2;
+{id: 1002}
+obj2.name = "Amit";
+"Amit"
+obj2;
+{id: 1002, name: "Amit"}
+obj2 = {};
+VM5916:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:6
+(anonymous) @ VM5916:1

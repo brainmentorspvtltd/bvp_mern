@@ -1,0 +1,89 @@
+var a = function(){}
+undefined
+typeof a;
+"function"
+var b = 100;
+undefined
+typeof b;
+"number"
+var add = (x,y)=>x+y;
+undefined
+add(10,20);
+30
+var n = 1000;
+function disp(x,y){
+   return n + x + y; 
+}
+undefined
+disp(1,2);
+1003
+n =2000;
+2000
+disp(1,2);
+2003
+var arr = [10,20,30,40,50,60];
+undefined
+for(let i =0;i<arr.length; i++){
+console.log('Arr ', arr[i]);
+}
+VM512:2 Arr  10
+VM512:2 Arr  20
+VM512:2 Arr  30
+VM512:2 Arr  40
+VM512:2 Arr  50
+VM512:2 Arr  60
+undefined
+arr.forEach
+ƒ forEach() { [native code] }
+arr.forEach(element=>console.log(element));
+VM663:1 10
+VM663:1 20
+VM663:1 30
+VM663:1 40
+VM663:1 50
+VM663:1 60
+undefined
+arr.forEach((element,index)=>console.log(element,index));
+VM737:1 10 0
+VM737:1 20 1
+VM737:1 30 2
+VM737:1 40 3
+VM737:1 50 4
+VM737:1 60 5
+undefined
+arr.forEach((element,index,a)=>console.log(element,index,a));
+VM754:1 10 0 (6) [10, 20, 30, 40, 50, 60]
+VM754:1 20 1 (6) [10, 20, 30, 40, 50, 60]
+VM754:1 30 2 (6) [10, 20, 30, 40, 50, 60]
+VM754:1 40 3 (6) [10, 20, 30, 40, 50, 60]
+VM754:1 50 4 (6) [10, 20, 30, 40, 50, 60]
+VM754:1 60 5 (6) [10, 20, 30, 40, 50, 60]
+undefined
+var products = [{id:1001, name:'Apple Iphone 12', price:90000, color:'Black'}, {id:1002, name:'Samsung Galaxy', price:70000, color:'Red'}];
+undefined
+products.forEach(product=>console.log(product.name, product.price));
+VM1102:1 Apple Iphone 12 90000
+VM1102:1 Samsung Galaxy 70000
+undefined
+products.forEach((product,index)=>console.log(index , product.name, product.price));
+VM1139:1 0 "Apple Iphone 12" 90000
+VM1139:1 1 "Samsung Galaxy" 70000
+undefined
+products.forEach((product,index)=>console.log(index+1 , product.name, product.price));
+VM1153:1 1 "Apple Iphone 12" 90000
+VM1153:1 2 "Samsung Galaxy" 70000
+undefined
+products
+(2) [{…}, {…}]0: {id: 1001, name: "Apple Iphone 12", price: 90000, color: "Black"}1: {id: 1002, name: "Samsung Galaxy", price: 70000, color: "Red"}length: 2__proto__: Array(0)
+var obj= {products:products};
+undefined
+obj;
+{products: Array(2)}products: Array(2)0: {id: 1001, name: "Apple Iphone 12", price: 90000, color: "Black"}1: {id: 1002, name: "Samsung Galaxy", price: 70000, color: "Red"}length: 2__proto__: Array(0)__proto__: Object
+var jsonString = JSON.stringify(obj);
+undefined
+jsonString
+"{\"products\":[{\"id\":1001,\"name\":\"Apple Iphone 12\",\"price\":90000,\"color\":\"Black\"},{\"id\":1002,\"name\":\"Samsung Galaxy\",\"price\":70000,\"color\":\"Red\"}]}"
+obj;
+{products: Array(2)}products: (2) [{…}, {…}]__proto__: Object
+typeof jsonString
+"string"
