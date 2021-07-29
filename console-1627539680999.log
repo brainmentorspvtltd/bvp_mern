@@ -1,0 +1,394 @@
+var arr = [10,120,30,140,50,150, 10,20,10];
+undefined
+typeof arr;
+"object"
+arr instanceof Array;
+true
+typeof Array;
+"function"
+arr.push(100);
+10
+arr;
+(10) [10, 120, 30, 140, 50, 150, 10, 20, 10, 100]
+arr.pop();
+100
+arr;
+(9) [10, 120, 30, 140, 50, 150, 10, 20, 10]
+arr.splice(1,2);
+(2) [120, 30]
+arr;
+(7) [10, 140, 50, 150, 10, 20, 10]
+arr.splice(0);
+(7) [10, 140, 50, 150, 10, 20, 10]
+arr;
+[]
+var arr = [10,120,30,140,50,150, 10,20,10];
+undefined
+arr.length
+9
+arr.length=5;
+5
+arr;
+(5) [10, 120, 30, 140, 50]
+arr.length=0;
+0
+arr;
+[]
+var arr = [10,120,30,140,50,150, 10,20,10];
+undefined
+arr;
+(9) [10, 120, 30, 140, 50, 150, 10, 20, 10]
+arr.splice(0,1,9999);
+[10]
+arr;
+(9) [9999, 120, 30, 140, 50, 150, 10, 20, 10]
+arr.splice(0,2,55,10);
+(2) [9999, 120]0: 99991: 120length: 2__proto__: Array(0)
+arr;
+(9) [55, 10, 30, 140, 50, 150, 10, 20, 10]
+arr.splice(1,0,2000);
+[]
+arr;
+(10) [55, 2000, 10, 30, 140, 50, 150, 10, 20, 10]
+arr.insert
+undefined
+arr instanceof Array;
+true
+Array;
+ƒ Array() { [native code] }
+console.dir(Array);
+VM1125:1 ƒ Array()arguments: (...)caller: (...)from: ƒ from()isArray: ƒ isArray()length: 1name: "Array"of: ƒ of()prototype: [constructor: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, find: ƒ, …]Symbol(Symbol.species): (...)get Symbol(Symbol.species): ƒ [Symbol.species]()__proto__: ƒ ()[[Scopes]]: Scopes[0]
+undefined
+Array.prototype.push
+ƒ push() { [native code] }
+Array.prototype.splice
+ƒ splice() { [native code] }
+typeof Array.prototype
+"object"
+Array.prototype.insert = function(){
+console.log('I am INsert fn ');
+}
+ƒ (){
+console.log('I am INsert fn ');
+}
+arr.insert();
+VM1372:2 I am INsert fn 
+undefined
+Array.prototype.insert = function(index, value){
+this.splice(index, 0 , value);
+return this.length;
+//console.log('I am INsert fn ');
+}
+ƒ (index, value){
+this.splice(index, 0 , value);
+return this.length;
+//console.log('I am INsert fn ');
+}
+arr.push(999999);
+11
+arr;
+(11) [55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+arr.insert(0,87777);
+12
+arr;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+Array.prototype.insert
+ƒ (index, value){
+this.splice(index, 0 , value);
+return this.length;
+//console.log('I am INsert fn ');
+}
+arr.forEach(element=>console.log(element));
+VM1847:1 87777
+VM1847:1 55
+VM1847:1 2000
+VM1847:1 10
+VM1847:1 30
+VM1847:1 140
+VM1847:1 50
+VM1847:1 150
+VM1847:1 10
+VM1847:1 20
+VM1847:1 10
+VM1847:1 999999
+undefined
+var gst = arr.map((currentElement)=>currentElement + currentElement * 0.18);
+undefined
+arr;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+gst;
+(12) [103576.86, 64.9, 2360, 11.8, 35.4, 165.2, 59, 177, 11.8, 23.6, 11.8, 1179998.82]
+arr;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+var m = [...arr];
+undefined
+m;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+var n = arr.map(element=>element);
+undefined
+n;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+arr;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+n == arr;
+false
+n[0] = 1;
+1
+n;
+(12) [1, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+arr;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+arr;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+arr.find(currentElement=>currentElement==55);
+55
+arr.find(currentElement=>currentElement==555);
+undefined
+arr.findIndex(currentElement =>currentElement===55);
+1
+arr.findIndex(currentElement =>currentElement===555);
+-1
+arr.filter(currentElement=>currentElement>100);
+(5) [87777, 2000, 140, 150, 999999]0: 877771: 20002: 1403: 1504: 999999length: 5__proto__: Array(0)
+arr.find(currentElement=>currentElement>100);
+87777
+arr.findIndex(currentElement=>currentElement>100);
+0
+arr.filter(currentElement=>currentElement>1000000);
+[]
+arr.map(element=>`Rs ${element.toLocaleString('hi-IN')}`;
+VM3174:1 Uncaught SyntaxError: missing ) after argument list
+arr.map(element=>`Rs ${element.toLocaleString('hi-IN')}`);
+(12) ["Rs 87,777", "Rs 55", "Rs 2,000", "Rs 10", "Rs 30", "Rs 140", "Rs 50", "Rs 150", "Rs 10", "Rs 20", "Rs 10", "Rs 9,99,999"]
+arr;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+var f = arr.filter(ele =>true);
+undefined
+f;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+arr;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+f == arr;
+false
+arr.reduce((acc, element) => acc+ element,acc=0);
+1090251
+arr.reduce((acc, element) => {
+if(element>100){
+acc = acc+ element;
+}
+return acc;
+}, acc=0);
+1090066
+arr.reduce((acc, element) => {
+if(element>100){
+acc = acc+ element;
+}
+return acc;
+});
+1090066
+arr.filter(element=>element>100);
+(5) [87777, 2000, 140, 150, 999999]
+arr.reduce((acc, element)=>{
+if(element>100){
+acc.push(element);
+}
+return acc;
+}, acc =[]);
+(5) [87777, 2000, 140, 150, 999999]
+arr;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+arr.reduce((acc,element)=>{
+if(element>acc){
+acc = element;
+}
+return acc;
+}, acc = 0);
+999999
+arr;
+(12) [87777, 55, 2000, 10, 30, 140, 50, 150, 10, 20, 10, 999999]
+arr.sort();
+(12) [10, 10, 10, 140, 150, 20, 2000, 30, 50, 55, 87777, 999999]
+arr.sort((first, second)=>first - second);
+(12) [10, 10, 10, 20, 30, 50, 55, 140, 150, 2000, 87777, 999999]
+arr;
+(12) [10, 10, 10, 20, 30, 50, 55, 140, 150, 2000, 87777, 999999]
+arr.sort((first, second)=>second - first);
+(12) [999999, 87777, 2000, 150, 140, 55, 50, 30, 20, 10, 10, 10]
+var names = ['ram','shyam','amit','anil','ajay'];
+undefined
+'ram'-'shyam'
+NaN
+'ram'.localeCompare('shyam')
+-1
+'ram'.localeCompare('amit')
+1
+'ram'.localeCompare('ram')
+0
+names.sort((first, second)=>first.localeCompare(second));
+(5) ["ajay", "amit", "anil", "ram", "shyam"]
+names.sort((first, second)=>second.localeCompare(first));
+(5) ["shyam", "ram", "anil", "amit", "ajay"]
+names;
+(5) ["shyam", "ram", "anil", "amit", "ajay"]
+names.push("Amit");
+6
+names.push("Tim");
+7
+names.sort((first, second)=>first.localeCompare(second));
+(7) ["ajay", "amit", "Amit", "anil", "ram", "shyam", "Tim"]0: "ajay"1: "amit"2: "Amit"3: "anil"4: "ram"5: "shyam"6: "Tim"length: 7__proto__: Array(0)
+arr;
+(12) [999999, 87777, 2000, 150, 140, 55, 50, 30, 20, 10, 10, 10]
+arr.every(element=>element>10);
+false
+arr.every(element=>element>5);
+true
+arr.some(element=>element>20);
+true
+arr.some(element=>element>20000);
+true
+arr.push(3333);
+13
+arr.unshift(1111);
+14
+arr;
+(14) [1111, 999999, 87777, 2000, 150, 140, 55, 50, 30, 20, 10, 10, 10, 3333]
+arr.pop();
+3333
+arr;
+(13) [1111, 999999, 87777, 2000, 150, 140, 55, 50, 30, 20, 10, 10, 10]
+arr.splice(1,1);
+[999999]
+arr;
+(12) [1111, 87777, 2000, 150, 140, 55, 50, 30, 20, 10, 10, 10]
+arr.shift();
+1111
+arr;
+(11) [87777, 2000, 150, 140, 55, 50, 30, 20, 10, 10, 10]
+arr.reverse();
+(11) [10, 10, 10, 20, 30, 50, 55, 140, 150, 2000, 87777]
+arr.indexOf(2000);
+9
+function loop(){
+for(let i = 1; i<=10; i++){
+
+}
+}
+const evenodd = element=>element%2==0?'Even '+element:'Odd '+element;
+undefined
+function loop(fn){
+for(let i = 1; i<=10; i++){
+console.log(fn(i));
+}
+}
+const evenodd = element=>element%2==0?'Even '+element:'Odd '+element;
+loop(evenodd);
+VM5755:1 Uncaught SyntaxError: Identifier 'evenodd' has already been declared
+function loop(fn){
+for(let i = 1; i<=10; i++){
+console.log(fn(i));
+}
+}
+
+loop(evenodd);
+VM5760:3 Odd 1
+VM5760:3 Even 2
+VM5760:3 Odd 3
+VM5760:3 Even 4
+VM5760:3 Odd 5
+VM5760:3 Even 6
+VM5760:3 Odd 7
+VM5760:3 Even 8
+VM5760:3 Odd 9
+VM5760:3 Even 10
+undefined
+loop(element=>element**3);
+VM5760:3 1
+VM5760:3 8
+VM5760:3 27
+VM5760:3 64
+VM5760:3 125
+VM5760:3 216
+VM5760:3 343
+VM5760:3 512
+VM5760:3 729
+VM5760:3 1000
+undefined
+function countDown(){
+var count = 0;
+count++;
+return count;
+}
+undefined
+countDown();
+1
+countDown();
+1
+countDown();
+1
+countDown();
+1
+var count = 0;
+function countDown(){
+
+count++;
+return count;
+}
+undefined
+countDown();
+1
+countDown();
+2
+countDown();
+3
+countDown();
+4
+count;
+4
+count = "Amit";
+"Amit"
+countDown();
+NaN
+let count = 0;
+function countDown(){
+
+count++;
+return count;
+}
+VM6108:1 Uncaught SyntaxError: Identifier 'count' has already been declared
+function init(){
+let count = 0;
+function countDown(){
+
+count++;
+return count;
+}
+}
+undefined
+function init(){
+let count = 0;
+function countDown(){
+
+count++;
+return count;
+}
+return countDown;
+}
+undefined
+var fn = init();
+undefined
+fn;
+ƒ countDown(){
+
+count++;
+return count;
+}
+fn();
+1
+fn();
+2
+fn();
+3
+fn();
+4
+count;
+NaN
