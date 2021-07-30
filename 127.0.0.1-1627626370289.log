@@ -1,0 +1,33 @@
+one.html:40 Live reload enabled.
+document.getElementById('bt');
+<button id=​"bt">​Clear All​</button>​
+var button = document.getElementById('bt');
+undefined
+button.addEventListener('click',function(){
+console.log('Button Bind It');
+});
+undefined
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+button.removeEventListener('click');
+VM428:1 Uncaught TypeError: Failed to execute 'removeEventListener' on 'EventTarget': 2 arguments required, but only 1 present.
+    at <anonymous>:1:8
+(anonymous) @ VM428:1
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It
+VM309:2 Button Bind It

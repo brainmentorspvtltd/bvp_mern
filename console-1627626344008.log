@@ -1,0 +1,247 @@
+function whoAmI(){
+console.log('My Name is ', this.name);
+}
+undefined
+var name = 'Amit';
+undefined
+whoAmI(); // window.whoAmI();
+VM76:2 My Name is  Amit
+undefined
+var myObject = {
+name:'Ram'
+}
+undefined
+console.dir(whoAmI);
+VM283:1 ƒ whoAmI()arguments: nullcaller: nulllength: 0name: "whoAmI"prototype: {constructor: ƒ}__proto__: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Object[[FunctionLocation]]: ​[[Scopes]]: Scopes[0][[FunctionLocation]]: VM76:1[[Scopes]]: Scopes[1]
+undefined
+whoAmI.call(myObject);
+VM76:2 My Name is  Ram
+undefined
+function whoAmI(city, pincode){
+console.log('My Name is ', this.name, 'City ', city, ' Pincode ', pincode);
+}
+undefined
+whoAmI('Delhi',110007); // window.whoAmI('Delhi',110007);
+VM529:2 My Name is  Amit City  Delhi  Pincode  110007
+undefined
+whoAmI.call(myObject,'New Delhi',110007);
+VM529:2 My Name is  Ram City  New Delhi  Pincode  110007
+undefined
+function printIt(amount, orgName){
+console.log(this.id, this.name, this.city);
+console.log(amount, orgName);
+}
+undefined
+printIt(9000,'ABC'); // window.printIt(9000,'ABC');
+VM1037:2 undefined "Amit" undefined
+VM1037:3 9000 "ABC"
+undefined
+window.id;
+undefined
+window.name;
+"Amit"
+window.city;
+undefined
+var employee = {id:1001,name:'Ramesh',city:'Mumbai'};
+undefined
+var customer = {id:1002, name:'Anil', city:'Delhi'};
+undefined
+var student = {id:1003,name:'Sunil', city:'Delhi'};
+undefined
+printIt.call(employee,99999,'TCS');
+VM1037:2 1001 "Ramesh" "Mumbai"
+VM1037:3 99999 "TCS"
+undefined
+printIt.call(customer,77777,'Google');
+VM1037:2 1002 "Anil" "Delhi"
+VM1037:3 77777 "Google"
+undefined
+printIt.call(student,44444,'SRCC');
+VM1037:2 1003 "Sunil" "Delhi"
+VM1037:3 44444 "SRCC"
+undefined
+printIt(999,'ABC');
+VM1037:2 undefined "Amit" undefined
+VM1037:3 999 "ABC"
+undefined
+printIt.call(customer,55344,'Google');
+VM1037:2 1002 "Anil" "Delhi"
+VM1037:3 55344 "Google"
+undefined
+printIt.apply(customer, 
+VM2188:1 Uncaught SyntaxError: Unexpected end of input
+var arr = [55344, 'Google'];
+printIt.apply(customer, 
+VM2214:2 Uncaught SyntaxError: Unexpected end of input
+var arr = [55344, 'Google'];
+printIt.apply(customer, arr);
+VM1037:2 1002 "Anil" "Delhi"
+VM1037:3 55344 "Google"
+undefined
+printIt
+ƒ printIt(amount, orgName){
+console.log(this.id, this.name, this.city);
+console.log(amount, orgName);
+}
+var arr = [90,100,77,44,22];
+undefined
+var x = arr[0];
+undefined
+x;
+90
+var y = arr[3];
+undefined
+y;
+44
+var [a,b] = arr;
+undefined
+a;
+90
+b;
+100
+arr;
+(5) [90, 100, 77, 44, 22]
+var [a,,,d] = arr;
+undefined
+a;
+90
+d;
+44
+var [a,b] = [10,20];
+undefined
+a;
+10
+b;
+20
+[a,b] = [b,a];
+(2) [20, 10]
+a;
+20
+b;
+10
+var obj = {id:1001, name:'Ram'};
+undefined
+var {name, id} = obj;
+undefined
+name;
+"Ram"
+id;
+1001
+function show([x,y,z]){
+console.log(x,y,z);
+}
+undefined
+arr;
+(5) [90, 100, 77, 44, 22]
+show(arr);
+VM2928:2 90 100 77
+undefined
+function disp({name, id}){
+console.log(name, id );
+}
+undefined
+disp(obj);
+VM3050:2 Ram 1001
+undefined
+printIt
+ƒ printIt(amount, orgName){
+console.log(this.id, this.name, this.city);
+console.log(amount, orgName);
+}
+printIt.call(customer,55344,'Google');
+VM1037:2 1002 "Anil" "Delhi"
+VM1037:3 55344 "Google"
+undefined
+printIt.apply(customer, [9999,'Google']);
+VM1037:2 1002 "Anil" "Delhi"
+VM1037:3 9999 "Google"
+undefined
+var bindItWithCustomer = printIt.bind(customer);
+undefined
+bindItWithCustomer(8888, 'ABCD');
+VM1037:2 1002 "Anil" "Delhi"
+VM1037:3 8888 "ABCD"
+undefined
+bindItWithCustomer(8888, 'ABCD');
+VM1037:2 1002 "Anil" "Delhi"
+VM1037:3 8888 "ABCD"
+undefined
+bindItWithCustomer(8888, 'ABCD');
+VM1037:2 1002 "Anil" "Delhi"
+VM1037:3 8888 "ABCD"
+undefined
+bindItWithCustomer(8888, 'ABCD');
+VM1037:2 1002 "Anil" "Delhi"
+VM1037:3 8888 "ABCD"
+undefined
+bindItWithCustomer(8888, 'ABCD');
+VM1037:2 1002 "Anil" "Delhi"
+VM1037:3 8888 "ABCD"
+undefined
+var course = {id:1001, name:'JavaScript',price:9999};
+undefined
+function createCourse(id, name, price){
+    var course = {};
+    course.id = id;
+    course.name = name;
+    course.price = price;
+    return course; 
+}
+undefined
+var js = createCourse(1001, 'JS ',9999);
+undefined
+js
+{id: 1001, name: "JS ", price: 9999}
+var nodejs = createCourse(1002, 'NodeJS ',11999);
+undefined
+nodejs
+{id: 1002, name: "NodeJS ", price: 11999}
+typeof js;
+"object"
+typeof nodejs
+"object"
+js
+{id: 1001, name: "JS ", price: 9999}id: 1001name: "JS "price: 9999__proto__: Object
+js instanceof Object;
+true
+nodejs instanceof Object
+true
+function show(){
+console.log(this);
+}
+undefined
+show();
+VM4075:2 Window {window: Window, self: Window, document: document, name: "Ram", location: Location, …}
+undefined
+var e = new show(); // this {}
+VM4075:2 show {}
+undefined
+e;
+show {}__proto__: Objectconstructor: ƒ show()__proto__: Object
+e instanceof show;
+true
+e instanceof Object;
+true
+js;
+{id: 1001, name: "JS ", price: 9999}id: 1001name: "JS "price: 9999__proto__: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+js instanceof createCourse;
+false
+js instanceof Object;
+true
+function Course(id, name, price){
+    //var course = {}; this = {} // type course
+    this.id = id;
+    this.name = name;
+    this.price = price;
+    //return course;
+}
+var reactjs = new Course(1001, 'ReactJS',7777);
+undefined
+reactjs
+Course {id: 1001, name: "ReactJS", price: 7777}
+nodejs
+{id: 1002, name: "NodeJS ", price: 11999}
+reactjs instanceof Course;
+true
+reactjs instanceof Object;
+true

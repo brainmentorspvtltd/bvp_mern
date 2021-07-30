@@ -1,0 +1,110 @@
+window;
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+this;
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+window == this;
+true
+function whoAmI(){
+console.log('My Name is ', this.name);
+}
+undefined
+var name = 'Amit'; // Hoisting
+undefined
+window.name;
+"Amit"
+window.whoAmI;
+ƒ whoAmI(){
+console.log('My Name is ', this.name);
+}
+whoAmI(); // window.whoAmI();
+VM247:2 My Name is  Amit
+undefined
+var obj = {
+/*disp: function(){
+}*/
+disp(){ // ES6 Object ShortHand
+console.log("I am the Disp ");
+}
+};
+undefined
+disp();
+VM661:1 Uncaught ReferenceError: disp is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM661:1
+obj.disp();
+VM639:5 I am the Disp 
+undefined
+window.obj.disp();
+VM639:5 I am the Disp 
+undefined
+var obj = {
+/*disp: function(){
+}*/
+disp(){ // ES6 Object ShortHand
+console.log("I am the Disp ", this);
+}
+}
+undefined
+obj.disp();
+VM792:5 I am the Disp  {disp: ƒ}
+undefined
+window.obj.disp();
+VM792:5 I am the Disp  {disp: ƒ}
+undefined
+var myObject = {
+name:'Ram'
+}
+undefined
+myObject.name;
+"Ram"
+window.name;
+"Amit"
+window.myObject.name;
+"Ram"
+whoAmI
+ƒ whoAmI(){
+console.log('My Name is ', this.name);
+}
+whoAmI();
+VM247:2 My Name is  Amit
+undefined
+window.whoAmI();
+VM247:2 My Name is  Amit
+undefined
+window.name;
+"Amit"
+this.name;
+"Amit"
+whoAmI
+ƒ whoAmI(){
+console.log('My Name is ', this.name);
+}
+console.dir(whoAmI);
+VM1311:1 ƒ whoAmI()arguments: nullcaller: nulllength: 0name: "whoAmI"prototype: {constructor: ƒ}__proto__: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()[[FunctionLocation]]: ​[[Scopes]]: Scopes[0][[FunctionLocation]]: VM247:1[[Scopes]]: Scopes[1]
+undefined
+var arr = [10,20,30,40];
+undefined
+console.dir(arr);
+VM1402:1 Array(4)0: 101: 202: 303: 40length: 4__proto__: Array(0)concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}__proto__: Object
+undefined
+arr instanceof Array;
+true
+var obj = {id:101,name:'Ram'};
+undefined
+console.dir(obj);
+VM1593:1 Objectid: 101name: "Ram"__proto__: Object
+undefined
+arr.__proto__;
+[constructor: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, find: ƒ, …]
+typeof arr.__proto__;
+"object"
+whoAmI.__proto__
+ƒ () { [native code] }
+typeof whoAmI.__proto__
+"function"
+window.__proto__
+Window {TEMPORARY: 0, PERSISTENT: 1, Symbol(Symbol.toStringTag): "Window", constructor: ƒ}
+window instanceof Window
+true
+typeof window.__proto__;
+"object"

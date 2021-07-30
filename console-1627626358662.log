@@ -1,0 +1,99 @@
+// Rest Param - N Arguments Take
+function show(...arg){
+console.log(arg);
+}
+undefined
+show(10,20,30,40,50);
+VM283:3 (5) [10, 20, 30, 40, 50]
+undefined
+// Rest Param - N Arguments Take
+function show(...arg){
+//console.log(arg);
+return arg.reduce((acc, element)=>acc+element);
+}
+undefined
+show(10,20,30,40,50);
+150
+var x = [1,2,3,4,5];
+undefined
+var y = [9,100,200];
+undefined
+var z = [...x,...y];
+undefined
+z;
+(8) [1, 2, 3, 4, 5, 9, 100, 200]
+var z1 = [x,y];
+undefined
+z1;
+(2) [Array(5), Array(3)]
+var prices = [1000,90.20,54545.33,66666.33];
+undefined
+var result = prices.map(element=>`Rs ${element.toLocaleString('hi-IN')}`);
+undefined
+result;
+(4) ["Rs 1,000", "Rs 90.2", "Rs 54,545.33", "Rs 66,666.33"]
+prices;
+(4) [1000, 90.2, 54545.33, 66666.33]
+function input(arr, searchValue){ // Filter
+    let result = arr.filter(element=>element>searchValue);
+    return function (){ // Formatting
+        let result2 = result.map(element=>`Rs ${element.toLocaleString('hi-IN')}`);    
+        return function (){ // print
+            result2.forEach(element=>console.log(element);
+}
+}
+}
+VM1274:6 Uncaught SyntaxError: missing ) after argument list
+function input(arr, searchValue){ // Filter
+    let result = arr.filter(element=>element>searchValue);
+    return function (){ // Formatting
+        let result2 = result.map(element=>`Rs ${element.toLocaleString('hi-IN')}`);    
+        return function (){ // print
+            result2.forEach(element=>console.log(element));
+}
+}
+}
+undefined
+input(prices,100)()();
+VM1281:6 Rs 1,000
+VM1281:6 Rs 54,545.33
+VM1281:6 Rs 66,666.33
+undefined
+var fn = function(){
+console.log('FN is a function ');
+}
+undefined
+typeof fn;
+"function"
+var x = 100;
+undefined
+typeof x;
+"number"
+function init(){ 
+let count = 0; 
+
+function countDown(){ 
+count++; 
+return count; 
+} 
+return countDown; 
+}
+undefined
+var ff = init();
+undefined
+ff;
+ƒ countDown(){ 
+count++; 
+return count; 
+}
+typeof ff;
+"function"
+ff();
+1
+ff();
+2
+input(prices,100);
+ƒ (){ // Formatting
+        let result2 = result.map(element=>`Rs ${element.toLocaleString('hi-IN')}`);    
+        return function (){ // print
+            result2.forEach(element=>console.log(element…

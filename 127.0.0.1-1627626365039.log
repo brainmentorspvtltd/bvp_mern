@@ -1,0 +1,52 @@
+window.document
+#document<!DOCTYPE html><html lang=​"en">​<head>​…​</head>​<body cz-shortcut-listen=​"true">​…​</body>​<input type=​"text">​<br>​<input type=​"text">​<br>​<input type=​"text">​<br>​<input type=​"text">​<br>​<input type=​"text">​<br>​<button id=​"bt">​Clear All​</button>​<!-- Code injected by live-server --><script type=​"text/​javascript">​…​</script>​</body>​</html>​
+typeof document;
+"object"
+document.getElementsByTagName('input');
+HTMLCollection(5) [input, input, input, input, input]0: input1: input2: input3: input4: inputlength: 5__proto__: HTMLCollection
+var a = document.getElementsByTagName('input');
+undefined
+typeof a;
+"object"
+a instanceof Array;
+false
+a instanceof HTMLCollection;
+true
+function clearAll(){
+var a = document.getElementsByTagName('input');
+for(let i =0 ; i<a.length; i++){
+a[i].value= '';
+}
+}
+undefined
+clearAll();
+undefined
+function clearAll(){
+var inputBoxes = document.getElementsByTagName('input');
+inputBoxes.forEach(txtBox =>txtBox.value = '');
+// for(let i =0 ; i<a.length; i++){
+// a[i].value= '';
+// }
+}
+undefined
+clearAll();
+VM1800:3 Uncaught TypeError: inputBoxes.forEach is not a function
+    at clearAll (<anonymous>:3:12)
+    at <anonymous>:1:1
+clearAll @ VM1800:3
+(anonymous) @ VM1821:1
+HTMLCollection.prototype.forEach
+undefined
+Array.prototype.forEach
+ƒ forEach() { [native code] }
+function clearAll(){
+var inputBoxes = document.getElementsByTagName('input');
+Array.prototype.forEach.call(inputBoxes,txtBox =>txtBox.value = '');
+//inputBoxes.forEach(txtBox =>txtBox.value = '');
+// for(let i =0 ; i<a.length; i++){
+// a[i].value= '';
+// }
+}
+undefined
+clearAll();
+undefined
