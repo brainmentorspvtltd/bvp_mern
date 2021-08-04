@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 0px;
+            padding: 0px;
+        }
+        ul li {
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            background-color: lightblue;
+            margin: 0px 10px;
+            width: 15%;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+        ul li a {
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .dropdown {
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            display: none;
+        }
+        .dropdown ul li {
+            display: block;
+            width: 100%;
+            margin: 0px;
+            padding: 10px 0px;
+        }
+
+        ul li:hover .dropdown {
+            display: block;
+        }
+
+        .col {
+            display: inline-block;
+            width: 32%;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>This is heading_1</h1>
+    <h2>This is heading_2</h2>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic rem eligendi nulla sapiente molestiae impedit nesciunt dolorem corporis dolor amet, voluptatibus ut minima ab, dignissimos cumque officia at illum ipsa.
+    </p>
+
+    <ul>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Men</a>
+            <div class="dropdown">
+                <ul>
+                    <li>
+                        <a href="#">TV</a>
+                    </li>
+                    <li>
+                        <a href="#">Mobile</a>
+                    </li>
+                    <li>
+                        <a href="#">Laptop</a>
+                    </li>
+                    <li>
+                        <a href="#">Tabs</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="#">Women</a>
+        </li>
+        <li>
+            <a href="#">Electronics</a>
+            <div class="dropdown">
+                <ul>
+                    <li>
+                        <a href="#">TV</a>
+                    </li>
+                    <li>
+                        <a href="#">Mobile</a>
+                    </li>
+                    <li>
+                        <a href="#">Laptop</a>
+                    </li>
+                    <li>
+                        <a href="#">Tabs</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="#">Furniture</a>
+        </li>
+    </ul>
+
+    <div class="col-1 col">
+        <h2>This is col-1</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam deleniti quos nulla minima reprehenderit dolor neque rerum eligendi, eum rem corporis error eius hic quis nemo, nostrum totam asperiores.
+        </p>
+    </div>
+    <div class="col-2 col">
+        <h2>This is col-2</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam deleniti quos nulla minima reprehenderit dolor neque rerum eligendi, eum rem corporis error eius hic quis nemo, nostrum totam asperiores.
+        </p>
+    </div>
+    <div class="col-3 col">
+        <h2>This is col-3</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam deleniti quos nulla minima reprehenderit dolor neque rerum eligendi, eum rem corporis error eius hic quis nemo, nostrum totam asperiores.
+        </p>
+    </div>
+    
+</body>
+</html>
