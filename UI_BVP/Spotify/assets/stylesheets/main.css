@@ -1,0 +1,82 @@
+/* Global Settings */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+a {
+    text-decoration: none;
+}
+
+/* Specific Settings */
+#main-nav {
+    background-color: #000;
+    height: 100%;
+    position: fixed;
+    width: 19%;
+    padding: 20px 10px;
+}
+#main-nav .logo {
+    padding: 0px 20px;
+    width: 75%;
+    margin-bottom: 20px;
+}
+#main-nav .nav-list {
+    margin-bottom: 30px;
+}
+#main-nav ul li a {
+    color: #fff;
+    display: block;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+#main-nav ul li a {
+    font-size: 14px;
+}
+#main-nav ul li a i {
+    margin-right: 15px;
+    font-size: 24px;
+}
+#main-nav ul li.active {
+    background-color: #282828;
+    border-radius: 3px;
+}
+
+
+#main {
+    background-color: #1F1F1F;
+    width: 81%;
+    position: relative;
+    left: 19%;
+    padding: 20px;
+}
+
+#main section {
+    margin-bottom: 30px;
+}
+
+#section_1 h2,
+#section_2 h2,
+#section_3 h2,
+#section_4 h2{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.box {
+    background-color: #181818;
+    padding: 10px 15px;
+    transition: 0.5s;
+}
+.box a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.box:hover {
+    background-color: #282828;
+}

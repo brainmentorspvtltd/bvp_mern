@@ -1,0 +1,19 @@
+.row {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: space-evenly;
+}
+
+.col {
+    border: 1px solid red;
+    padding: 10px;
+    background-color: lightgray;
+    margin-bottom: 10px;
+}
+
+.col-1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
