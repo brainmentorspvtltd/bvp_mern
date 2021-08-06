@@ -37,17 +37,17 @@
                 <ul>
                     <li class="active">
                         <a href="#">
-                            <i class="fas fa-home"></i> Home
+                            <i class="fas fa-home"></i> <span>Home</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fas fa-search"></i> Search
+                            <i class="fas fa-search"></i> <span>Search</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fas fa-music"></i> Library
+                            <i class="fas fa-music"></i> <span>Library</span>
                         </a>
                     </li>
                 </ul>
@@ -57,12 +57,12 @@
                 <ul>
                     <li>
                         <a href="#">
-                            <i class="fas fa-plus"></i> Create Playlist
+                            <i class="fas fa-plus"></i> <span>Create Playlist</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fas fa-heart"></i> Liked Songs
+                            <i class="fas fa-heart"></i> <span>Liked Songs</span>
                         </a>
                     </li>
                 </ul>
@@ -80,6 +80,9 @@
                                 <a href="#">
                                     <img src="https://i.scdn.co/image/ab67616d00001e02d1dcdada40e51563cab2ff2a" class="w-100" alt="img">
                                 </a>
+                                <button class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </button>
                             </div>
                             <div class="desc">
                                 <a href="#">
@@ -378,7 +381,28 @@
         </main>
 
         <!-- Player -->
-        <div id="player"></div>
+        <div id="player">
+            <div class="controls">
+                <button class="btn btn-danger">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="btn btn-primary">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="btn btn-danger">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+            <br>
+            <div class="player-bar">
+                <span>00:00</span>
+                <input type="range" value="0">
+                <span>00:00</span>
+            </div>
+            <audio controls>
+                <source src="">
+            </audio>
+        </div>
 
     </div>
     

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="flex_demo.css">
+
+    <script src="https://kit.fontawesome.com/b06605e970.js"></script>
+</head>
+<body>
+
+    <!-- <h1>Flex Demo</h1> -->
+
+    <!-- 
+    there must a row
+    inside row only column as a child is allowed 
+    -->
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col logo">
+                    <a href="#">
+                        <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="logo">
+                    </a>
+                </div>
+                <div class="col search">
+                    <form action="#">
+                        <input type="text" placeholder="Search for products">
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="col cart">
+                    <span>Cart</span>
+                </div>
+                <div class="col login">
+                    <button>Login</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="col" id="main-nav">
+        <input type="checkbox" value="toggle-menu">
+        <button class="menu-btn">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Men</a>
+            </li>
+            <li>
+                <a href="#">Women</a>
+            </li>
+            <li>
+                <a href="#">Electronics</a>
+            </li>
+            <li>
+                <a href="#">Furniture</a>
+            </li>
+            <li>
+                <a href="#">More</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="banner">
+        <div class="carousel">
+            <div class="slide">
+                <img class="w-100" src="https://rukminim1.flixcart.com/flap/1800/1800/image/02bbbd655baac7da.jpg?q=80" alt="img_1">
+            </div>
+            <div class="slide">
+                <img class="w-100" src="https://images.freekaamaal.com/post_images/1620122066.PNG" alt="img_1">
+            </div>
+            <div class="slide">
+                <img class="w-100" src="https://rukminim1.flixcart.com/flap/2016/508/image/a6c01a03797c9dbb.jpg?q=50" alt="img_1">
+            </div>
+            <div class="slide">
+                <img class="w-100" src="https://lh3.googleusercontent.com/proxy/a-t_zKm7rGy8prEHWUlkGHiV-ehVhrKVnaQPqbwxtHt0YULW7eJSmvvGejPJatXGcVyY2RJUL4_7ShuYRHD9ljRvLnNnA93rEPA" alt="img_1">
+            </div>
+            <div class="slide">
+                <img class="w-100" src="https://rukminim1.flixcart.com/flap/1800/1800/image/02bbbd655baac7da.jpg?q=80" alt="img_1">
+            </div>
+        </div>
+    </div>
+
+    <section id="section_1">
+        <div class="grid">
+            <div class="col col-1">
+                <img class="w-100" src="https://c.ndtvimg.com/2019-09/201mgue_flipkart-amazon-sale_625x300_24_September_19.jpg" alt="img">
+            </div>
+            <div class="col col-2">
+                <img class="w-100" src="https://c.ndtvimg.com/2019-09/201mgue_flipkart-amazon-sale_625x300_24_September_19.jpg" alt="img">
+                <img class="w-100" src="https://c.ndtvimg.com/2019-09/201mgue_flipkart-amazon-sale_625x300_24_September_19.jpg" alt="img">
+            </div>
+            <div class="col col-3">
+                <img class="w-100" src="https://c.ndtvimg.com/2019-09/201mgue_flipkart-amazon-sale_625x300_24_September_19.jpg" alt="img">
+            </div>
+            <div class="col col-4">
+                <img class="w-100" src="https://c.ndtvimg.com/2019-09/201mgue_flipkart-amazon-sale_625x300_24_September_19.jpg" alt="img">
+            </div>
+            <div class="col col-5">
+                <img class="w-100" src="https://c.ndtvimg.com/2019-09/201mgue_flipkart-amazon-sale_625x300_24_September_19.jpg" alt="img">
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
