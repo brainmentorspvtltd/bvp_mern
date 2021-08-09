@@ -1,0 +1,26 @@
+var name = "aMiT sRivAstaVA";
+undefined
+name.split(" ");
+(2) ["aMiT", "sRivAstaVA"]
+ name = "aMiT";
+"aMiT"
+name.split(" ");
+["aMiT"]
+var name = "aMiT sRivAstaVA";
+undefined
+var arr = name.split(" ");
+undefined
+arr[0];
+"aMiT"
+arr[0].charAt(0).toUpperCase();
+"A"
+arr[0].substring(1);
+"MiT"
+arr[0].substring(1).toLowerCase();
+"mit"
+arr[0].charAt(0).toUpperCase() + arr[0].substring(1).toLowerCase();;
+"Amit"
+var w = 1000.20;
+undefined
+w.toLocaleString('hi-IN');
+"1,000.2"

@@ -1,0 +1,267 @@
+function Employee(id = 0, name = '', salary = 0.0){
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+}
+Employee.prototype.hra = function(){
+return this.salary * 0.50;
+}
+Employee.prototype.da = function(){
+return this.salary * 0.20;
+}
+Employee.prototype.ta = function(){
+return this.salary * 0.10;
+}
+Employee.prototype.ma = function(){
+return this.salary * 0.15;
+}
+Employee.prototype.pf = function(){
+return this.salary * 0.05;
+}
+Employee.prototype.gs = function(){
+return this.salary + this.hra() + this.da() + this.ta() + this.ma();
+}
+Employee.prototype.tax = function(){
+return this.gs() * 0.10;
+}
+Employee.prototype.ns = function(){
+return this.gs() - this.tax() - this.pf();
+}
+Employee.prototype.properCase = function(){
+var arr = this.name.split(" ");
+var fullName = '';
+for(let i = 0; i<arr.length; i++){
+    let name = arr[i];
+    fullName += name.charAt(0).toUpperCase() + name.substring(1).toLowerCase()+" ";
+}
+return fullName;
+}
+Employee.prototype.formatted = function(val){
+    return 'Rs '+ (val.toLocaleString('hi-IN'));
+}
+Employee.prototype.print = function(){
+    return ` Name ${this.properCase(this.name)}
+            Salary ${this.formatted(this.salary)}
+            HRA ${this.formatted(this.hra())}
+            DA ${this.formatted(this.da())}
+            TA ${this.formatted(this.ta())}
+            MA ${this.formatted(this.ma())}
+            PF ${this.formatted(this.pf())}
+            GS ${this.formatted(this.gs())}
+            TAX ${this.formatted(this.tax())}
+            NS ${this.formatted(this.ns())}
+
+`
+}
+ƒ (){
+    return ` Name ${this.properCase(this.name)}
+            Salary ${this.formatted(this.salary)}
+            HRA ${this.formatted(this.hra())}
+            DA ${this.formatted(this.da())}
+       …
+Employee;
+ƒ Employee(id = 0, name = '', salary = 0.0){
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+}
+Employee.prototype.constructor
+ƒ Employee(id = 0, name = '', salary = 0.0){
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+}
+Employee.prototype
+{hra: ƒ, da: ƒ, ta: ƒ, ma: ƒ, pf: ƒ, …}da: ƒ ()formatted: ƒ (val)gs: ƒ ()hra: ƒ ()ma: ƒ ()ns: ƒ ()pf: ƒ ()print: ƒ ()properCase: ƒ ()ta: ƒ ()tax: ƒ ()constructor: ƒ Employee(id = 0, name = '', salary = 0.0)__proto__: Object
+var ram = new Employee(1001, "Ram",9000);
+undefined
+ram;
+Employee {id: 1001, name: "Ram", salary: 9000}
+ram.print();
+" Name Ram \n            Salary Rs 9,000\n            HRA Rs 4,500\n            DA Rs 1,800\n            TA Rs 900\n            MA Rs 1,350\n            PF Rs 450\n            GS Rs 17,550\n            TAX Rs 1,755\n            NS Rs 15,345\n\n"
+console.log(ram.print());
+VM1490:1  Name Ram 
+            Salary Rs 9,000
+            HRA Rs 4,500
+            DA Rs 1,800
+            TA Rs 900
+            MA Rs 1,350
+            PF Rs 450
+            GS Rs 17,550
+            TAX Rs 1,755
+            NS Rs 15,345
+
+
+undefined
+var ram = new Employee(1001, "rAm kUmar shArmA",9000);
+undefined
+console.log(ram.print());
+VM1577:1  Name Ram Kumar Sharma 
+            Salary Rs 9,000
+            HRA Rs 4,500
+            DA Rs 1,800
+            TA Rs 900
+            MA Rs 1,350
+            PF Rs 450
+            GS Rs 17,550
+            TAX Rs 1,755
+            NS Rs 15,345
+
+
+undefined
+class Employee{}
+VM1616:1 Uncaught SyntaxError: Identifier 'Employee' has already been declared
+class ITEmployee{
+
+}
+undefined
+typeof ITEmployee;
+"function"
+class ITEmployee{
+
+}
+undefined
+class ITEmployee{
+    constructor(id=0, name='', salary=0.0){
+        this.id = id;
+        this.name = name;
+        this.salary = salary ;
+}
+hra(){
+    return this.salary * 0.50;
+}
+da(){
+    return this.salary * 0.20;
+}
+ta(){
+    return this.salary * 0.10;
+}
+ma(){
+    return this.salary * 0.15;
+}
+pf(){
+    return this.salary * 0.05;
+}
+gs(){
+    return this.salary + this.hra() + this.da() + this.ta() + this.ma();
+}
+tax(){
+return this.gs() * 0.10;
+}
+ns(){
+return this.gs() - this.tax() - this.pf();
+}
+}
+undefined
+typeof ITEmployee
+"function"
+ITEmployee
+class ITEmployee{
+    constructor(id=0, name='', salary=0.0){
+        this.id = id;
+        this.name = name;
+        this.salary = salary ;
+}
+hra(){
+    return this.salary * 0.50;
+}
+da(){
+    return this.…
+ITEmployee.prototype;
+{constructor: ƒ, hra: ƒ, da: ƒ, ta: ƒ, ma: ƒ, …}constructor: class ITEmployeeda: ƒ da()gs: ƒ gs()hra: ƒ hra()ma: ƒ ma()ns: ƒ ns()pf: ƒ pf()ta: ƒ ta()tax: ƒ tax()__proto__: Object
+var ram = new ITEmployee(1001, "Ram", 9999);
+undefined
+ram instanceof ITEmployee;
+true
+ram.__proto__ == ITEmployee.prototype;
+true
+ram.__proto__.constructor;
+class ITEmployee{
+    constructor(id=0, name='', salary=0.0){
+        this.id = id;
+        this.name = name;
+        this.salary = salary ;
+}
+hra(){
+    return this.salary * 0.50;
+}
+da(){
+    return this.…
+ITEmployee.prototype.__proto__ ==Object.prototype
+true
+class A{
+
+}
+class B extends A{
+}
+undefined
+var b = new B();
+undefined
+b;
+B {}
+b.__proto__
+A {constructor: ƒ}
+b.__proto__==B.prototype;
+true
+b.__proto__.__proto__== A.prototype;
+true
+b.__proto__.__proto__.__proto__== Object.prototype;
+true
+b.__proto__.__proto__.__proto__.__proto__;
+null
+class A{
+    constructor(){
+        console.log("A cons call ");
+    }
+}
+class B extends A{
+constructor(){
+         super();   
+        console.log("A cons call ");
+    }
+}
+undefined
+var b = new B();
+VM3102:3 A cons call 
+VM3102:9 A cons call 
+undefined
+class A{
+    constructor(){
+        console.log("A cons call ");
+    }
+}
+class B extends A{
+constructor(){
+         super();   
+        console.log("B cons call ");
+    }
+}
+undefined
+var b = new B();
+VM3139:3 A cons call 
+VM3139:9 B cons call 
+undefined
+class Q{
+static show(){
+    console.log("Show ");
+}
+}
+undefined
+Q.show();
+VM3220:3 Show 
+undefined
+typeof Q;
+"function"
+function disp(){
+console.log("I am Disp ");
+}
+undefined
+disp.ee = function(){
+console.log("EE ");
+}
+ƒ (){
+console.log("EE ");
+}
+disp.ee();
+VM3444:2 EE 
+undefined
