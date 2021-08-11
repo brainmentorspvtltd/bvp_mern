@@ -1,0 +1,53 @@
+function whoAmI(){
+console.log('I am ',this.name);
+}
+undefined
+var name = 'Amit';
+undefined
+window.name;
+"Amit"
+typeof window;
+"object"
+this;
+Window {window: Window, self: Window, document: document, name: "Amit", location: Location, …}
+windowl
+VM303:1 Uncaught ReferenceError: windowl is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM303:1
+window;
+Window {window: Window, self: Window, document: document, name: "Amit", location: Location, …}
+this == window;
+true
+window.whoAmI
+ƒ whoAmI(){
+console.log('I am ',this.name);
+}
+window.whoAmI();
+VM111:2 I am  Amit
+undefined
+whoAmI(); // by default it is bind with window
+VM111:2 I am  Amit
+undefined
+var obj = {name:'Ram'};
+undefined
+obj.whoAmI
+undefined
+window.whoAmI;
+ƒ whoAmI(){
+console.log('I am ',this.name);
+}
+var fn = whoAmI.bind(obj);
+undefined
+fn();
+VM111:2 I am  Ram
+undefined
+whoAmI();
+VM111:2 I am  Amit
+undefined
+var e = {a:function plus(){
+console.log('Plus ');
+}}
+undefined
+e.a()
+VM884:2 Plus 
+undefined

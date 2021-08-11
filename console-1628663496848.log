@@ -1,0 +1,12 @@
+var props = {title:'Counter App'};
+undefined
+typeof props;
+"object"
+props instanceof Object;
+true
+props.title
+"Counter App"
+var {title} = props;
+undefined
+title;
+"Counter App"
